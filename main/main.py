@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
 
 def parse_cookie(query: str) -> dict:
-    return {_.split('=')[0]: "=".join(_.split("=")[1:]) for _ in query.split(';') if _}
+    return {kv.split('=')[0]: "=".join(kv.split("=")[1:]) for kv in query.split(';') if kv}
 
 
 if __name__ == '__main__':
